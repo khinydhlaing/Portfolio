@@ -1,3 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -45,7 +52,14 @@ header {
   background-color: black;
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
+.menu-icon .material-icons {
+  font-size: 36px;
+}
 .hero {
   padding: 120px 20px;
   text-align: center;
@@ -53,14 +67,14 @@ header {
 }
 
 .hero h1{
-  font-size: 55px;
+  font-size: 35px;
 }
 .hero p{
-  font-size: 25px;
+  font-size: 18px;
 }
 .hero button{
-  padding:20px 40px;
-  font-size: 20px;
+  padding:12px 24px;
+  font-size: 16px;
   background: #777;
   color: white;
   margin-top: 10px;
@@ -255,3 +269,214 @@ footer{
   background-color: #ccc;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #f8f8f8;
+    position: absolute;
+    top: 60px; /* just below header */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navlinks.show {
+    display: flex;
+  }
+
+  .navlinks a {
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .pro_img {
+    margin: 0 0 20px 0; /* top/bottom spacing */
+    width: 150px;
+    height: 150px;
+  }
+
+  .about_content {
+    margin-left: 0;
+  }
+
+  .about_content h2 {
+    font-size: 24px;
+  }
+
+  .about_content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .pro_img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about_content h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  .skills ul {
+    flex-wrap: wrap;           /* allows chips to move to next line */
+    justify-content: center;   /* center chips horizontally */
+    gap: 10px;                 /* adds space between chips */
+  }
+
+  .skills li {
+    margin-right: 0;           /* remove extra right margin */
+    padding: 8px 15px;         /* slightly smaller padding for small screens */
+    font-size: 14px;           /* smaller text for readability */
+  }
+}
+@media (max-width: 1024px) {
+  .service_card {
+    flex-wrap: wrap; /* allows cards to move to next row */
+    gap: 20px;
+  }
+
+  .card {
+    flex: 1 1 250px; /* flexible width, min 250px */
+    max-width: 300px; /* prevents cards from getting too wide on larger tablets */
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service_card {
+    flex-direction: column; /* stack cards vertically on small screens */
+    align-items: center;
+  }
+
+  .card {
+    width: 80%; /* cards take most of screen width */
+    max-width: none;
+  }
+}
+@media (max-width: 1024px) {
+  .sample_project {
+    flex-wrap: wrap;          /* allows elements to wrap to new line */
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .sample_img {
+    width: 80%;               /* responsive width */
+    height: 150px;
+    justify-content: center;
+  }
+
+  .sample_img p {
+    padding: 40px 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sample_project {
+    flex-direction: column;   /* stack image and review vertically */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .sample_img {
+    width: 100%;              /* full width */
+  }
+
+  .sample_project_explain {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .sub_contact {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .sub_contact .code {
+    width: 100%;
+    max-width: 400px;  /* prevent overly wide */
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub_contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;         /* full width form */
+    max-width: 400px;
+  }
+
+  .code img {
+    width: 50%;           /* smaller QR on mobile */
+  }
+
+  .code p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero button {
+    width: 90%;  /* full-width button on very small screens */
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
